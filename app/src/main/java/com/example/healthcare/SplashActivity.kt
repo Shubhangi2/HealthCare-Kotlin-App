@@ -20,8 +20,10 @@ class SplashActivity : AppCompatActivity() {
         var user: FirebaseUser? = auth.currentUser
         if(user == null){
             startActivity(Intent(applicationContext, LoginActivity::class.java))
+            finish()
         }else{
-            startActivity(Intent(applicationContext, RegisterActivity::class.java))
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+            finish()
 
         }
     }
