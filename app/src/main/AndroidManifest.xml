@@ -13,6 +13,12 @@
         android:theme="@style/Theme.HealthCare"
         tools:targetApi="31">
         <activity
+            android:name=".adminpanel.edit.EditFindDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adminpanel.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

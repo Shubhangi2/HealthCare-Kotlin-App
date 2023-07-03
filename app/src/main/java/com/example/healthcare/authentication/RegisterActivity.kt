@@ -21,12 +21,12 @@ class RegisterActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val et_name = findViewById<EditText>(R.id.regUserName)
-        val et_email = findViewById<EditText>(R.id.regEmail)
-        val et_pwd = findViewById<EditText>(R.id.regPwd)
-        val et_cpwd = findViewById<EditText>(R.id.regConfirmPwd)
+        val et_name = findViewById<EditText>(R.id.adminEDname)
+        val et_email = findViewById<EditText>(R.id.adminEDlocation)
+        val et_pwd = findViewById<EditText>(R.id.adminEDnumber)
+        val et_cpwd = findViewById<EditText>(R.id.adminEDspecialization)
 
-        val btn = findViewById<Button>(R.id.registerBtn)
+        val btn = findViewById<Button>(R.id.addDoctorBtn)
         val existingUser = findViewById<TextView>(R.id.existing_user)
 
 
