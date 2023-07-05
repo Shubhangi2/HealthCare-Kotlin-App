@@ -9,8 +9,12 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthcare.R
+import com.example.healthcare.util.toast
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class AdminActivityAdapter(val context: Context, val list: ArrayList<EditDoctorDetailModel>) : RecyclerView.Adapter<AdminActivityAdapter.myViewHolder>() {
 
@@ -40,8 +44,19 @@ class AdminActivityAdapter(val context: Context, val list: ArrayList<EditDoctorD
         holder.contact.text = model.phone
         holder.fee.text = "Fee: "+ model.fees
         holder.location.text = model.location
+        val key: String = model.key.toString()
         holder.delete.setOnClickListener{
-
+            val dbref : DatabaseReference = FirebaseDatabase.getInstance().getReference("Admin")
+            dbref.child("DDetails").child(key).removeValue()
+                .addOnCompleteListener { task ->
+                    if(task.isSuccessful){
+                        notifyDataSetChanged()
+                        toast(context, "Details deleted successfully")
+                    }else{
+                        val error: String = task.exception.toString()
+                        toast(context, error)
+                    }
+                }
         }
 
     }

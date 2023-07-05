@@ -54,7 +54,7 @@ class EditFindDoctorActivity : AppCompatActivity() {
             if(name.isEmpty() || contact.isEmpty() || location.isEmpty() || fee.isEmpty() || specialization.isEmpty()){
                 toast(applicationContext, "Please fill all the details")
             }else{
-                val details = EditDoctorDetailModel(name, contact, location, specialization, fee)
+                val details = EditDoctorDetailModel(key,name, contact, location, specialization, fee)
                 database.child("DDetails").child(key).setValue(details)
                     .addOnCompleteListener{task->
                         if(task.isSuccessful){

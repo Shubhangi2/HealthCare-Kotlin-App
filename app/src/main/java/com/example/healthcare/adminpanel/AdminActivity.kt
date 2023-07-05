@@ -43,6 +43,7 @@ class AdminActivity : AppCompatActivity() {
         database.child("DDetails").addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
+                    list.clear()
                     for(details in snapshot.children){
                         val det =details.getValue(EditDoctorDetailModel::class.java)
                         list.add(det!!)
