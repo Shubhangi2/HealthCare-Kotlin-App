@@ -22,7 +22,7 @@ class AdminActivityAdapter(val context: Context, val list: ArrayList<EditDoctorD
         val location = itemView.findViewById<TextView>(R.id.ddItemLocation)
         val fee = itemView.findViewById<TextView>(R.id.ddItemFee)
         val specialization = itemView.findViewById<TextView>(R.id.adminEDspecialization)
-        val delete = itemView.findViewById<Button>(R.id.ddItemDelete)
+        val delete = itemView.findViewById<TextView>(R.id.ddItemDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
