@@ -39,6 +39,7 @@ class SplashActivity : AppCompatActivity() {
                    if(snapshot.exists()){
                        toast(applicationContext, "snapshot exists")
                        startActivity(Intent(applicationContext, AdminActivity::class.java))
+                       finish()
                    }else{
                        toast(applicationContext, "snapshot doesn't exists")
 
