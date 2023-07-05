@@ -55,7 +55,7 @@ class EditFindDoctorActivity : AppCompatActivity() {
                 toast(applicationContext, "Please fill all the details")
             }else{
                 val details = EditDoctorDetailModel(name, contact, location, specialization, fee)
-                database.child("Doctor Details").child(key).setValue(details)
+                database.child("DDetails").child(key).setValue(details)
                     .addOnCompleteListener{task->
                         if(task.isSuccessful){
                             toast(applicationContext, "data uploaded successfully")
