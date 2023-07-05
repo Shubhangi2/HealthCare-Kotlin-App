@@ -13,4 +13,5 @@
     <color name="colorRed">#c11515</color>
     <color name="purpleDark">#ff210642</color>
     <color name="yellowLight">#FFF777</color>
+    <color name="cardColor">#1BE6FF</color>
 </resources>
