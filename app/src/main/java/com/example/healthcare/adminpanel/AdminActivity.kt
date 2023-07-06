@@ -11,7 +11,9 @@ import com.example.healthcare.R
 import com.example.healthcare.adminpanel.edit.AdminActivityAdapter
 import com.example.healthcare.adminpanel.edit.EditDoctorDetailModel
 import com.example.healthcare.adminpanel.edit.EditFindDoctorActivity
+import com.example.healthcare.authentication.LoginActivity
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -31,6 +33,12 @@ class AdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
+
+        val floatingActionButton: FloatingActionButton = findViewById(R.id.floatingActionButton)
+        floatingActionButton.setOnClickListener{
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
+            finish()
+        }
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference().child("Admin")
