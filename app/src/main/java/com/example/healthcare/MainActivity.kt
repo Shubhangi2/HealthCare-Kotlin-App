@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.example.healthcare.authentication.LoginActivity
 import com.example.healthcare.authentication.RegisterActivity
+import com.example.healthcare.userpanel.FindDoctorActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         exit.setOnClickListener{
             startActivity(Intent(applicationContext, LoginActivity::class.java))
             finish()
+        }
+
+        findDoctor.setOnClickListener{
+            startActivity(Intent(applicationContext, FindDoctorActivity::class.java))
         }
 
     }
