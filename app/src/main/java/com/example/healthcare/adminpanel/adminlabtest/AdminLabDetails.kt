@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.example.healthcare.R
+import com.google.firebase.database.DatabaseReference
 import org.w3c.dom.Text
 
 class AdminLabDetails : AppCompatActivity() {
+    private lateinit var dbref : DatabaseReference
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
