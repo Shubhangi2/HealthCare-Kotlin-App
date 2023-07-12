@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCare"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".userpanel.DoctorSpecializationActiviity"
+            android:name=".adminpanel.adminlabtest.AdminEditLabTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adminpanel.adminlabtest.AdminLabDetails"
+            android:exported="false" />
+        <activity
+            android:name=".adminpanel.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userpanel.labtest.LabTestActivity"
             android:exported="false" />
         <activity
             android:name=".userpanel.FindDoctorActivity"
@@ -22,7 +31,7 @@
             android:name=".adminpanel.edit.EditFindDoctorActivity"
             android:exported="false" />
         <activity
-            android:name=".adminpanel.AdminActivity"
+            android:name=".adminpanel.edit.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -33,10 +42,9 @@
         <activity
             android:name=".authentication.RegisterActivity"
             android:exported="false" />
-
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
