@@ -4,5 +4,5 @@ data class LabTestModel(
     val labkey: String ?= null,
     val name: String ?= null,
     val price: String ?= null,
-    val desc: String ?= null
+    val contact: String ?= null
 )
