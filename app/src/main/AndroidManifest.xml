@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HealthCare"
         tools:targetApi="31">
         <activity
+            android:name=".userpanel.buymedicines.BuyMedicinesActivity"
+            android:exported="false" />
+        <activity
             android:name=".adminpanel.AdminAddMedicine.AddMedicineActivity"
             android:exported="false" />
         <activity
