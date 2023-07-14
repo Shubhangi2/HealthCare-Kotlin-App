@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.example.healthcare.R
+import com.example.healthcare.adminpanel.AdminAddMedicine.AddMedicineActivity
 import com.example.healthcare.adminpanel.adminlabtest.AdminEditLabTestActivity
 import com.example.healthcare.adminpanel.edit.AdminActivity
 import com.example.healthcare.authentication.LoginActivity
@@ -18,8 +19,13 @@ class AdminMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_admin_main)
 
         val doctorDetails = findViewById<TextView>(R.id.MainEditDDetails)
-        val labDetails = findViewById<TextView>(R.id.MainEditLDetails)
+        val labDetails = findViewById<TextView>(R.id.mainEditLDetails)
         val logout = findViewById<TextView>(R.id.MainAdminLogout)
+        val medicine = findViewById<TextView>(R.id.EditAddMedicine)
+
+        medicine.setOnClickListener{
+            startActivity(Intent(applicationContext, AddMedicineActivity::class.java))
+        }
 
         logout.setOnClickListener{
             startActivity(Intent(applicationContext, LoginActivity::class.java))

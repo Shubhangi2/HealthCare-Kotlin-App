@@ -1,6 +1,7 @@
 package com.example.healthcare.adminpanel.edit
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -59,6 +60,8 @@ class EditFindDoctorActivity : AppCompatActivity() {
                     .addOnCompleteListener{task->
                         if(task.isSuccessful){
                             toast(applicationContext, "data uploaded successfully")
+                            startActivity(Intent(applicationContext, AdminActivity::class.java))
+                            finish()
                         }else{
                             val error: String = task.exception.toString()
                             toast(applicationContext, "error: " + error)

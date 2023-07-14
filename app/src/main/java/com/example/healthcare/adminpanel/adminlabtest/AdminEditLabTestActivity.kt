@@ -1,10 +1,12 @@
 package com.example.healthcare.adminpanel.adminlabtest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.healthcare.R
+import com.example.healthcare.adminpanel.AdminMainActivity
 import com.example.healthcare.util.toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -50,6 +52,8 @@ class AdminEditLabTestActivity : AppCompatActivity() {
                     .addOnCompleteListener{task ->
                         if(task.isSuccessful){
                             toast(applicationContext, "Details uploaded successfully")
+                            startActivity(Intent(applicationContext, AdminMainActivity::class.java))
+                            finish()
                         }else{
                             val error : String = task.exception.toString()
                             toast(applicationContext, "error : " + error)
