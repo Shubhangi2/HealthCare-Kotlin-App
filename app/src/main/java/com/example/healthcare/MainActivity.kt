@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView
 import com.example.healthcare.authentication.LoginActivity
 import com.example.healthcare.authentication.RegisterActivity
 import com.example.healthcare.userpanel.FindDoctorActivity
+import com.example.healthcare.userpanel.buymedicines.BuyMedicinesActivity
 import com.example.healthcare.userpanel.labtest.LabTestActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val findDoctor = findViewById<CardView>(R.id.cardFindDoctor)
         val exit = findViewById<CardView>(R.id.cardExit)
         val labtest = findViewById<CardView>(R.id.cardLabTest)
+        val buyMedicine = findViewById<CardView>(R.id.cardBuyMedicine)
 
         exit.setOnClickListener{
             startActivity(Intent(applicationContext, LoginActivity::class.java))
@@ -32,6 +34,10 @@ class MainActivity : AppCompatActivity() {
 
         labtest.setOnClickListener{
             startActivity(Intent(applicationContext, LabTestActivity::class.java))
+        }
+
+        buyMedicine.setOnClickListener{
+            startActivity(Intent(applicationContext, BuyMedicinesActivity::class.java))
         }
 
     }
