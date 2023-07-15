@@ -1,6 +1,7 @@
 package com.example.healthcare.userpanel.buymedicines
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,6 +41,11 @@ class BuyMedicinesActivity : AppCompatActivity() {
 
                     myadapter = MedicineAdapter(applicationContext, list)
                     recyclerView.adapter = myadapter
+                    myadapter.onItemClick = {
+                        val intent = Intent(applicationContext, ConfirmMedicine::class.java)
+                        startActivity(intent)
+                    }
+
                 }
             }
 
