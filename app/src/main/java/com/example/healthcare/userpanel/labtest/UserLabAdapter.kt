@@ -1,7 +1,6 @@
 package com.example.healthcare.userpanel.labtest
 
 import android.content.Context
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +12,9 @@ import com.example.healthcare.adminpanel.adminlabtest.LabTestModel
 class UserLabAdapter(val list: ArrayList<LabTestModel>, val context: Context): RecyclerView.Adapter<UserLabAdapter.myViewHolder>() {
 
     inner class myViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val name = itemView.findViewById<TextView>(R.id.MLtitle)
-        val contact = itemView.findViewById<TextView>(R.id.MLcontact)
-        val price = itemView.findViewById<TextView>(R.id.MLprice)
+        val name = itemView.findViewById<TextView>(R.id.orderItemName)
+        val contact = itemView.findViewById<TextView>(R.id.orderItemPrice)
+        val price = itemView.findViewById<TextView>(R.id.orderItemDelete)
 
     }
 

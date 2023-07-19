@@ -9,6 +9,7 @@ import com.example.healthcare.authentication.LoginActivity
 import com.example.healthcare.authentication.RegisterActivity
 import com.example.healthcare.userpanel.FindDoctorActivity
 import com.example.healthcare.userpanel.buymedicines.BuyMedicinesActivity
+import com.example.healthcare.userpanel.confirmorder.ConfirmUserOrder
 import com.example.healthcare.userpanel.labtest.LabTestActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val exit = findViewById<CardView>(R.id.cardExit)
         val labtest = findViewById<CardView>(R.id.cardLabTest)
         val buyMedicine = findViewById<CardView>(R.id.cardBuyMedicine)
+        val orderDetails = findViewById<CardView>(R.id.cardOrderDetails)
 
         exit.setOnClickListener{
             startActivity(Intent(applicationContext, LoginActivity::class.java))
@@ -40,5 +42,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, BuyMedicinesActivity::class.java))
         }
 
+        orderDetails.setOnClickListener{
+            startActivity(Intent(applicationContext, ConfirmUserOrder::class.java))
+        }
     }
 }

@@ -43,6 +43,9 @@ class BuyMedicinesActivity : AppCompatActivity() {
                     recyclerView.adapter = myadapter
                     myadapter.onItemClick = {
                         val intent = Intent(applicationContext, ConfirmMedicine::class.java)
+                        intent.putExtra("MedName", it.name)
+                        intent.putExtra("MedPrice", it.price)
+                        intent.putExtra("MedDesc", it.desc)
                         startActivity(intent)
                     }
 

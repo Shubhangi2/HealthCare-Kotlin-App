@@ -27,7 +27,7 @@
         android:layout_width="347dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="101dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/input_bg"
         android:ems="10"
         android:hint="Medicine name"
@@ -37,7 +37,6 @@
 
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMedicineTitle" />
 
@@ -46,14 +45,14 @@
         android:layout_width="347dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/input_bg"
         android:ems="10"
         android:hint="Enter price"
-        android:inputType="text"
+        android:inputType="number"
         android:paddingHorizontal="15dp"
-        android:textColor="@color/white"
 
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -64,7 +63,7 @@
         android:id="@+id/adminMedicineDesc"
         android:layout_width="347dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/input_bg"
         android:ems="10"
         android:hint="Add description"
