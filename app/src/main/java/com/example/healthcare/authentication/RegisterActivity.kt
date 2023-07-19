@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
                 btn.isEnabled = true
 
             }else{
-                if(password.length <= 8){
+                if(password.length < 8){
                     toast(applicationContext, "Password length must be 8 characters")
                     btn.isEnabled = true
 
