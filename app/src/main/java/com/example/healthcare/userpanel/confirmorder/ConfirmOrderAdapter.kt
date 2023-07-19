@@ -38,5 +38,7 @@ class ConfirmOrderAdapter(val context: Context, val list: ArrayList<ConfirmOrder
         holder.totalAmt.text = "Total Amt : " +result
 
 
+
+
     }
 }

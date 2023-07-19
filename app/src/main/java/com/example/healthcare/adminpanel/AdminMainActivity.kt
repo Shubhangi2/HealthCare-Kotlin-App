@@ -10,8 +10,10 @@ import com.example.healthcare.adminpanel.AdminAddMedicine.AddMedicineActivity
 import com.example.healthcare.adminpanel.adminlabtest.AdminEditLabTestActivity
 import com.example.healthcare.adminpanel.edit.AdminActivity
 import com.example.healthcare.authentication.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class AdminMainActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +24,14 @@ class AdminMainActivity : AppCompatActivity() {
         val labDetails = findViewById<TextView>(R.id.mainEditLDetails)
         val logout = findViewById<TextView>(R.id.MainAdminLogout)
         val medicine = findViewById<TextView>(R.id.EditAddMedicine)
+        auth = FirebaseAuth.getInstance()
 
         medicine.setOnClickListener{
             startActivity(Intent(applicationContext, AddMedicineActivity::class.java))
         }
 
         logout.setOnClickListener{
+            auth.signOut()
             startActivity(Intent(applicationContext, LoginActivity::class.java))
             finish()
         }
