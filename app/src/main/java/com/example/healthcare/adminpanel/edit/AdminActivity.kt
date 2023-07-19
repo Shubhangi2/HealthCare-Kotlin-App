@@ -56,6 +56,7 @@ class AdminActivity : AppCompatActivity() {
         val tv_FD = findViewById<TextView>(R.id.removeDetails)
         tv_FD.setOnClickListener{
                 startActivity(Intent(applicationContext, EditFindDoctorActivity::class.java))
+                finish()
 
         }
 

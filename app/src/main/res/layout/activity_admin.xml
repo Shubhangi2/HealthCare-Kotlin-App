@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Welcome Admin"
+        android:textStyle="bold"
+        android:text="Doctor Details"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +43,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/adminRecyclerView"
-        android:layout_width="409dp"
-        android:layout_height="587dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="5dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/removeDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
